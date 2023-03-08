@@ -1,5 +1,5 @@
 import "./List.css";
-export default function List({ activities, weather }) {
+export default function List({ activities, weather, onDeleteActivity }) {
   console.log(weather);
   console.log(activities);
   return (
@@ -15,7 +15,15 @@ export default function List({ activities, weather }) {
       </p>
       <ul>
         {activities.map((activity) => (
-          <li className="list-item">{activity.name}</li>
+          <li className="list-item" id={activity.id}>
+            {activity.name}
+            <button
+              aria-label="delete button"
+              onClick={() => onDeleteActivity(activity.id)}
+            >
+              x
+            </button>
+          </li>
         ))}
       </ul>
     </>
