@@ -1,0 +1,10 @@
+ul {
+  width: 80vw;
+  margin: auto;
+}
+
+.list-item {
+  background-color: gray;
+  list-style: none;
+  margin: 1vw;
+}
