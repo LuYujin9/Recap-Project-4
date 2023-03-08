@@ -31,8 +31,10 @@ function App() {
         console.log(error);
       }
     }
-
-    fetchWeather();
+    const intvl = setInterval(fetchWeather, 5000);
+    return () => {
+      clearInterval(intvl);
+    };
   }, []);
 
   const filterActivities = activities.filter(
@@ -47,9 +49,23 @@ function App() {
     };
     setActivities([newActivity, ...activities]);
   }
+
+  //delete button
+  function handleDeleteActivity(deleteId) {
+    console.log(deleteId);
+    const newActivities = activities.filter(
+      (activity) => activity.id !== deleteId
+    );
+    setActivities(newActivities);
+  }
+
   return (
     <div className="App">
-      <List activities={filterActivities} weather={weather} />
+      <List
+        activities={filterActivities}
+        weather={weather}
+        onDeleteActivity={handleDeleteActivity}
+      />
       <Form onAddActivity={handleAddActivity} />
     </div>
   );

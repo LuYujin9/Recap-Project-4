@@ -7,4 +7,6 @@ ul {
   background-color: gray;
   list-style: none;
   margin: 1vw;
+  display: flex;
+  justify-content: space-between;
 }
