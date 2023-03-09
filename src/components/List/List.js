@@ -1,7 +1,8 @@
 import "./List.css";
 export default function List({ activities, weather, onDeleteActivity }) {
-  console.log(weather);
+  console.log("the weather", weather);
   console.log(activities);
+  const { condition, temperature, isGoodWeather } = weather;
   return (
     <>
       <section className="weather-section">
@@ -17,7 +18,7 @@ export default function List({ activities, weather, onDeleteActivity }) {
       </p>
       <ul>
         {activities.map((activity) => (
-          <li className="list-item" id={activity.id}>
+          <li className="list-item" key={activity.id} id={activity.id}>
             {activity.name}
             <button
               className="delete-button"
