@@ -4,20 +4,23 @@ export default function List({ activities, weather, onDeleteActivity }) {
   console.log(activities);
   return (
     <>
-      <h2>
-        <span alt="emoji showing weathercondition">{weather.condition}</span>{" "}
+      <section className="weather-section">
+        <span className="emoji" alt="emoji showing weathercondition">
+          {weather.condition}
+        </span>{" "}
         {weather.temperature}°
-      </h2>
-      <p>
+      </section>
+      <p className="weather-text">
         {weather.isGoodWeather
-          ? "The weather is awesone/ Go outside and:"
-          : "Bad weather outside/ Here's what you can do now:"}
+          ? "The weather is awesone / Go outside and:"
+          : "Bad weather outside / Here's what you can do now:"}
       </p>
       <ul>
         {activities.map((activity) => (
           <li className="list-item" id={activity.id}>
             {activity.name}
             <button
+              className="delete-button"
               aria-label="delete button"
               onClick={() => onDeleteActivity(activity.id)}
             >
