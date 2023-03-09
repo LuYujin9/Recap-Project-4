@@ -62,8 +62,8 @@ function App() {
   return (
     <div className="App">
       <List
+        {...weather}
         activities={filterActivities}
-        weather={weather}
         onDeleteActivity={handleDeleteActivity}
       />
       <Form onAddActivity={handleAddActivity} />
