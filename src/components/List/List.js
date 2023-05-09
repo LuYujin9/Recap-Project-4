@@ -28,7 +28,7 @@ export default function List({
               aria-label="delete button"
               onClick={() => onDeleteActivity(activity.id)}
             >
-              x
+              ✖︎
             </button>
           </li>
         ))}

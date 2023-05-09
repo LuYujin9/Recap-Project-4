@@ -19,8 +19,8 @@ export default function Form({ onAddActivity }) {
       <label htmlFor="name">Name:</label>
       <input type="text" name="name" id="name" />
       <label htmlFor="isForGoodWeather">
-        Good-weather activity:{" "}
         <input type="checkbox" name="isForGoodWeather" id="isForGoodWeather" />
+        Good-weather activity:{" "}
       </label>
 
       <button type="submit" aria-label="Click to add activity!">
