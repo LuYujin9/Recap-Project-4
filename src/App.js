@@ -11,8 +11,6 @@ function App() {
     defaultValue: [],
   });
 
-  console.log(activities, "in app");
-
   const [weather, setWeather] = useState({
     condition: "",
     temperature: 0,
@@ -52,7 +50,6 @@ function App() {
 
   //delete button
   function handleDeleteActivity(deleteId) {
-    console.log(deleteId);
     const newActivities = activities.filter(
       (activity) => activity.id !== deleteId
     );
