@@ -17,4 +17,4 @@ Create, Read, Update, and Delete. These operations are the main features every a
 
 ## Preview
 
-[Weather & Activities App](https://recap-project-4.vercel.app)
+[Weather & Activities App](https://recap-project-4-eta.vercel.app)
